@@ -57,6 +57,7 @@ backend/src/routes, controllers, services, models, repositories, middlewares, co
 - SupplyCategory: constants/SupplyCategory、types/SupplyCategory、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - DispatchStatus: constants/DispatchStatus、types/DispatchStatus、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - ShelterStatus: constants/ShelterStatus、types/ShelterStatus、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
+- PlacementRecordType: constants/PlacementRecordType、types/PlacementRecord、api/Shelter、SheltersPage 最近记录展示均有引用。
 
 ## 为什么会牵一发动全身
 

@@ -98,33 +98,71 @@ export const mockData = {
   "shelter": [
     {
       "id": 1,
-      "name": "name 1",
-      "district": "district 1",
-      "capacity": 92,
-      "current_population": 92,
-      "contact_person": "contact person 1",
+      "name": "城东体育馆安置点",
+      "district": "城东区",
+      "capacity": 200,
+      "current_population": 168,
+      "remaining_slots": 32,
+      "contact_person": "王建国",
       "risk_level": "LOW",
-      "open_status": "SUBMITTED"
+      "open_status": "OPEN",
+      "recent_records": [
+        {
+          "id": 2,
+          "shelter_id": 1,
+          "record_type": "RECEIVE",
+          "count": 68,
+          "operator": "刘敏",
+          "related_shelter_id": null,
+          "resulting_population": 168,
+          "created_at": "2026-09-25T09:30:00Z"
+        },
+        {
+          "id": 1,
+          "shelter_id": 1,
+          "record_type": "RECEIVE",
+          "count": 100,
+          "operator": "刘敏",
+          "related_shelter_id": null,
+          "resulting_population": 100,
+          "created_at": "2026-09-24T08:00:00Z"
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "name 2",
-      "district": "district 2",
-      "capacity": 104,
-      "current_population": 104,
-      "contact_person": "contact person 2",
+      "name": "滨河学校安置点",
+      "district": "滨河区",
+      "capacity": 120,
+      "current_population": 120,
+      "remaining_slots": 0,
+      "contact_person": "李秀兰",
       "risk_level": "MEDIUM",
-      "open_status": "APPROVED"
+      "open_status": "FULL",
+      "recent_records": [
+        {
+          "id": 3,
+          "shelter_id": 2,
+          "record_type": "RECEIVE",
+          "count": 120,
+          "operator": "陈刚",
+          "related_shelter_id": null,
+          "resulting_population": 120,
+          "created_at": "2026-09-24T10:00:00Z"
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "name 3",
-      "district": "district 3",
-      "capacity": 116,
-      "current_population": 116,
-      "contact_person": "contact person 3",
+      "name": "西山社区安置点",
+      "district": "西山区",
+      "capacity": 80,
+      "current_population": 0,
+      "remaining_slots": 80,
+      "contact_person": "赵铁柱",
       "risk_level": "HIGH",
-      "open_status": "DRAFT"
+      "open_status": "STANDBY",
+      "recent_records": []
     }
   ],
   "dispatchOrder": [
