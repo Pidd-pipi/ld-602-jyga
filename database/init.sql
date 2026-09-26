@@ -42,6 +42,19 @@ CREATE TABLE IF NOT EXISTS shelter (
   open_status TEXT
 );
 
+CREATE TABLE IF NOT EXISTS shelter_placement_record (
+  id INTEGER PRIMARY KEY,
+  shelter_id TEXT,
+  change_type TEXT,
+  amount TEXT,
+  operator TEXT,
+  before_population TEXT,
+  after_population TEXT,
+  counterpart_shelter_id TEXT,
+  remark TEXT,
+  created_at TEXT
+);
+
 CREATE TABLE IF NOT EXISTS dispatch_order (
   id INTEGER PRIMARY KEY,
   event_id TEXT,

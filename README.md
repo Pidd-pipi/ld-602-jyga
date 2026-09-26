@@ -57,6 +57,15 @@ backend/src/routes, controllers, services, models, repositories, middlewares, co
 - SupplyCategory: constants/SupplyCategory、types/SupplyCategory、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - DispatchStatus: constants/DispatchStatus、types/DispatchStatus、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - ShelterStatus: constants/ShelterStatus、types/ShelterStatus、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
+- ShelterPlacementType: constants/ShelterPlacementType、types/ShelterPlacementRecord、constructors/ShelterConstructor、logTemplates、errorMessages/errorCodes（容量与人数校验）、SheltersPage 记录列表与后端 ShelterService 均有引用。
+
+## 避难点安置记录
+
+- 每次接收/转出/点间互转都会写入一条安置记录（人数、经办人、变动前后人数、关联点位、时间），前后端各存一份校验逻辑。
+- 转出人数不得高于该点现有人数；接收不得超过核定容量，达到容量自动变为 FULL，人数回落自动恢复 OPEN。
+- 关闭（CLOSED）或停用（STANDBY）期间不能接收；尚有人员未迁空的避难点拒绝关闭。
+- 点间互转先完成两边全部校验再一并改数，任一步失败两边人数都不变。
+- 避难点列表展示现有人数、剩余名额、容量水位和最近一条安置记录。
 
 ## 为什么会牵一发动全身
 

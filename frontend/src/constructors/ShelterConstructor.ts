@@ -1,16 +1,48 @@
 import type { Shelter } from "../types/Shelter";
+import type { PlacementPayload, ShelterPlacementRecord, TransferPayload } from "../types/ShelterPlacementRecord";
 
 export const createDefaultShelter = (overrides: Partial<Shelter> = {}): Shelter => ({
-  id: 1 as never,
-  name: "name 1" as never,
-  district: "district 1" as never,
-  capacity: 92 as never,
-  current_population: 92 as never,
-  contact_person: "contact person 1" as never,
-  risk_level: "LOW" as never,
-  open_status: "SUBMITTED" as never,
+  id: 0,
+  name: "",
+  district: "",
+  capacity: 0,
+  current_population: 0,
+  contact_person: "",
+  risk_level: "LOW",
+  open_status: "STANDBY",
   ...overrides
 });
 
 export const createShelterForm = createDefaultShelter;
 export const createShelterResponse = createDefaultShelter;
+
+export const createPlacementRecord = (overrides: Partial<ShelterPlacementRecord> = {}): ShelterPlacementRecord => ({
+  id: 0,
+  shelter_id: 0,
+  change_type: "RECEIVE",
+  amount: 0,
+  operator: "",
+  before_population: 0,
+  after_population: 0,
+  counterpart_shelter_id: null,
+  remark: "",
+  created_at: "",
+  ...overrides
+});
+
+export const createReceiveForm = (overrides: Partial<PlacementPayload> = {}): PlacementPayload => ({
+  shelter_id: 0,
+  amount: 1,
+  operator: "",
+  remark: "",
+  ...overrides
+});
+
+export const createTransferForm = (overrides: Partial<TransferPayload> = {}): TransferPayload => ({
+  from_shelter_id: 0,
+  to_shelter_id: 0,
+  amount: 1,
+  operator: "",
+  remark: "",
+  ...overrides
+});

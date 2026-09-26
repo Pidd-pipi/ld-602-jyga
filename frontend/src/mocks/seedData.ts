@@ -98,33 +98,117 @@ export const mockData = {
   "shelter": [
     {
       "id": 1,
-      "name": "name 1",
-      "district": "district 1",
-      "capacity": 92,
-      "current_population": 92,
-      "contact_person": "contact person 1",
+      "name": "城东体育馆安置点",
+      "district": "城东区",
+      "capacity": 500,
+      "current_population": 320,
+      "contact_person": "王敏",
       "risk_level": "LOW",
-      "open_status": "SUBMITTED"
+      "open_status": "OPEN"
     },
     {
       "id": 2,
-      "name": "name 2",
-      "district": "district 2",
-      "capacity": 104,
-      "current_population": 104,
-      "contact_person": "contact person 2",
+      "name": "滨河学校安置点",
+      "district": "滨河区",
+      "capacity": 300,
+      "current_population": 300,
+      "contact_person": "李强",
       "risk_level": "MEDIUM",
-      "open_status": "APPROVED"
+      "open_status": "FULL"
     },
     {
       "id": 3,
-      "name": "name 3",
-      "district": "district 3",
-      "capacity": 116,
-      "current_population": 116,
-      "contact_person": "contact person 3",
+      "name": "西山社区中心",
+      "district": "西城区",
+      "capacity": 150,
+      "current_population": 0,
+      "contact_person": "赵蕾",
       "risk_level": "HIGH",
-      "open_status": "DRAFT"
+      "open_status": "STANDBY"
+    },
+    {
+      "id": 4,
+      "name": "老港仓库改建安置点",
+      "district": "港湾区",
+      "capacity": 200,
+      "current_population": 0,
+      "contact_person": "陈刚",
+      "risk_level": "MEDIUM",
+      "open_status": "CLOSED"
+    }
+  ],
+  "shelterPlacementRecord": [
+    {
+      "id": 1,
+      "shelter_id": 1,
+      "change_type": "RECEIVE",
+      "amount": 200,
+      "operator": "王敏",
+      "before_population": 0,
+      "after_population": 200,
+      "counterpart_shelter_id": null,
+      "remark": "台风“海燕”首轮转移安置",
+      "created_at": "2026-09-24T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "shelter_id": 2,
+      "change_type": "RECEIVE",
+      "amount": 270,
+      "operator": "李强",
+      "before_population": 0,
+      "after_population": 270,
+      "counterpart_shelter_id": null,
+      "remark": "滨河低洼区整体转移",
+      "created_at": "2026-09-24T10:10:00Z"
+    },
+    {
+      "id": 3,
+      "shelter_id": 1,
+      "change_type": "RECEIVE",
+      "amount": 150,
+      "operator": "王敏",
+      "before_population": 200,
+      "after_population": 350,
+      "counterpart_shelter_id": null,
+      "remark": "第二轮转移安置",
+      "created_at": "2026-09-24T15:40:00Z"
+    },
+    {
+      "id": 4,
+      "shelter_id": 3,
+      "change_type": "TRANSFER_OUT",
+      "amount": 60,
+      "operator": "赵蕾",
+      "before_population": 60,
+      "after_population": 0,
+      "counterpart_shelter_id": null,
+      "remark": "点位停用，存量人员转出",
+      "created_at": "2026-09-25T09:20:00Z"
+    },
+    {
+      "id": 5,
+      "shelter_id": 1,
+      "change_type": "TRANSFER_OUT",
+      "amount": 30,
+      "operator": "王敏",
+      "before_population": 350,
+      "after_population": 320,
+      "counterpart_shelter_id": 2,
+      "remark": "分流至滨河学校安置点",
+      "created_at": "2026-09-25T11:05:00Z"
+    },
+    {
+      "id": 6,
+      "shelter_id": 2,
+      "change_type": "TRANSFER_IN",
+      "amount": 30,
+      "operator": "李强",
+      "before_population": 270,
+      "after_population": 300,
+      "counterpart_shelter_id": 1,
+      "remark": "自城东体育馆安置点分流",
+      "created_at": "2026-09-25T11:05:00Z"
     }
   ],
   "dispatchOrder": [
